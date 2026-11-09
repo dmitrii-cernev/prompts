@@ -1,0 +1,10 @@
+Terminal output optimization
+
+- Minimize terminal output to reduce context/token consumption.
+- For Maven, use "mvn -q -B -ntp" by default.
+- For builds, tests, and other verbose commands, capture output to a temporary log.
+- On success, report only a short status summary.
+- On failure, show the last 80 relevant lines.
+- Preserve original command exit codes.
+- Read additional log content only when necessary for debugging.
+- Never discard diagnostic information permanently before it can be inspected.
